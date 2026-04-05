@@ -22,9 +22,9 @@ const projects = [
 ]
 
 const testimonials = [
-  { name: 'David Mitchell', location: 'Restaurant Owner, London UK', initials: 'DM', text: "Xy built our restaurant's online ordering system and website. The system handles our daily orders seamlessly and the website looks fantastic. Professional, responsive, and delivered exactly what we needed. Highly recommended!" },
-  { name: 'Sarah Reynolds', location: 'School Administrator, Sydney Australia', initials: 'SR', text: 'Our school needed a secure voting system for student council elections. Xy delivered a professional, easy to use system that made our election process smooth and transparent. The real time results feature was incredibly helpful. Excellent work!' },
-  { name: 'James Carter', location: 'Small Business Owner, Texas USA', initials: 'JC', text: 'Needed a custom inventory management system for my retail store. Xy understood our requirements perfectly and delivered a system that has saved us countless hours. Great communication throughout the project. Will definitely work with them again.' }
+  { name: 'Mark Thompson', location: 'Restaurant Owner, Brisbane Australia', initials: 'MT', text: "Found Xy through social media and decided to work with them despite the distance. The video call meetings made coordination easy despite the time zone difference. Delivered a custom website for our cafe that increased our online orders significantly. Great communication and patience throughout the project. Will recommend!" },
+  { name: 'Maria Santos', location: 'School Principal, Manila Philippines', initials: 'MS', text: "Our school needed a voting system for our student council elections. Xy was professional and understanding of our requirements even though we had limited technical knowledge. The system worked flawlessly on election day and the results were accurate. Very satisfied with the outcome. Will definitely hire again for future projects." },
+  { name: 'John Liu', location: 'Retail Store Owner, Cebu City Philippines', initials: 'JL', text: "Needed an inventory management system for our store. Xy took the time to understand our business process and delivered exactly what we needed. The system has helped us track our stock much better. Patient developer who listens to feedback. Highly recommend for local businesses looking for custom solutions." }
 ]
 
 export default function Home() {
@@ -113,7 +113,7 @@ export default function Home() {
         <div className="container">
           <div className="section-header">
             <h2>What Clients Say</h2>
-            <p>Feedback from businesses and schools I&apos;ve worked with</p>
+            <p>Feedback from clients I've worked with</p>
           </div>
           <div className="testimonials-grid">
             {testimonials.map((t, i) => (
