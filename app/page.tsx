@@ -7,7 +7,7 @@ import { faWhatsapp, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 const heroImages = [
   '/pictures/540420865_2573014236425105_7755389066504817580_n.jpg',
-  '/pictures/538703578_815169917507753_8804508031377158415_n.jpg',
+  '/pictures/538703578_817169917507753_8804508031377178417_n.jpg',
   '/pictures/633558039_916952220840716_2449322185127861914_n.jpg',
   '/pictures/ba117ca1-ffc5-4c62-b83e-2e51b8494bb5.jpeg',
   '/pictures/c416affa-efcd-4121-860d-6d9d796dce7e.jpeg',
@@ -94,11 +94,11 @@ export default function Home() {
             </div>
             <div className="about-content">
               <h3>Building Digital Solutions with Purpose</h3>
-              <p>I&apos;m a 15 year old developer with over 5 years of coding experience, passionate about building real world digital systems. I started my journey at age 10 and have developed multiple production systems deployed in school environments and small businesses.</p>
+              <p>I'm a 17 year old developer with over 7 years of coding experience, passionate about building real world digital systems. I started my journey at age 13 and have developed multiple production systems deployed in school environments and small businesses.</p>
               <p>I specialize in creating custom websites for small businesses and building school management systems. From debugging complex issues to handling live deployments, I bring an engineering mindset to every project.</p>
               <div className="stats-grid">
                 <div className="stat-item"><h4>15+</h4><span>Projects Completed</span></div>
-                <div className="stat-item"><h4>5+</h4><span>Years Coding</span></div>
+                <div className="stat-item"><h4>4+</h4><span>Years Coding</span></div>
                 <div className="stat-item"><h4>100%</h4><span>Client Satisfaction</span></div>
               </div>
               <div className="skills-grid">
@@ -160,7 +160,7 @@ export default function Home() {
             <p>Have a project in mind? Let&apos;s talk about it.</p>
           </div>
           <div className="contact-options">
-            <a href="https://wa.me/639915120857" className="contact-option" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/639917120857" className="contact-option" target="_blank" rel="noopener noreferrer">
               <div className="contact-option-icon"><FontAwesomeIcon icon={faWhatsapp} /></div>
               <div className="contact-option-text"><h3>WhatsApp</h3><p>+63 991 512 0857</p></div>
               <FontAwesomeIcon icon={faArrowRight} />
