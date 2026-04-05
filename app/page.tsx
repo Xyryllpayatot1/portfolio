@@ -165,9 +165,9 @@ export default function Home() {
               <div className="contact-option-text"><h3>WhatsApp</h3><p>+63 991 512 0857</p></div>
               <FontAwesomeIcon icon={faArrowRight} />
             </a>
-            <a href="mailto:jhonxyryllsamoy@gmail.com" className="contact-option">
+            <a href="mailto:jhonxyryll@gmail.com" className="contact-option">
               <div className="contact-option-icon"><FontAwesomeIcon icon={faEnvelope} /></div>
-              <div className="contact-option-text"><h3>Email</h3><p>jhonxyryllsamoy@gmail.com</p></div>
+              <div className="contact-option-text"><h3>Email</h3><p>jhonxyryll@gmail.com</p></div>
               <FontAwesomeIcon icon={faArrowRight} />
             </a>
           </div>
@@ -180,7 +180,7 @@ export default function Home() {
             <p>&copy; 2026 Jhon Xyryll Samoy. All Rights Reserved.</p>
             <div className="social-links">
               <a href="#"><FontAwesomeIcon icon={faGithub} /></a>
-              <a href="mailto:jhonxyryllsamoy@gmail.com"><FontAwesomeIcon icon={faEnvelope} /></a>
+              <a href="mailto:jhonxyryll@gmail.com"><FontAwesomeIcon icon={faEnvelope} /></a>
             </div>
           </div>
         </div>
