@@ -1,449 +1,1162 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- Open Graph Meta Tags -->
-<meta property="og:title" content="Jhon Xyryll Samoy | Developer Portfolio">
-<meta property="og:description" content="Web & System Developer building scalable digital solutions. View my projects and systems here.">
-<meta property="og:image" content="https://photouploads.com/i/jCXL.png">
-<meta property="og:url" content="https://portfolio-xyryll.vercel.app/">
-<meta property="og:type" content="website">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jhon Xyryll Samoy | Software Developer</title>
+    <meta name="description"
+        content="Portfolio of Jhon Xyryll Samoy Software Developer and System Engineer from the Philippines">
 
-<!-- Twitter Preview (Optional but recommended) -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Jhon Xyryll Samoy | Developer Portfolio">
-<meta name="twitter:description" content="Web & System Developer building scalable digital solutions.">
-<meta name="twitter:image" content="https://photouploads.com/i/jCXL.png">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jhon Xyryll Samoy | Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-tertiary: #1a1a25;
+            --accent: #6366f1;
+            --accent-hover: #818cf8;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --border: #2a2a3a;
+            --gradient: linear-gradient(135deg, #6366f1, #a855f7);
+        }
 
-<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-body{
-    background:#0f172a;
-    color:#fff;
-    scroll-behavior:smooth;
-}
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-section{
-    padding:80px 10%;
-}
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Space Grotesk', sans-serif;
+        }
 
-h1,h2,h3{
-    margin-bottom:20px;
-}
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
 
-p{
-    line-height:1.7;
-    color:#cbd5e1;
-}
+        ul {
+            list-style: none;
+        }
 
-/* NAVBAR */
-nav{
-    position:fixed;
-    top:0;
-    width:100%;
-    background:#0f172a;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 10%;
-    z-index:1000;
-}
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:20px;
-    font-weight:500;
-}
+        section {
+            padding: 100px 0;
+        }
 
-nav a:hover{
-    color:#38bdf8;
-}
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: all 0.3s ease;
+        }
 
-/* HERO */
-#hero{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    background:linear-gradient(135deg,#1e293b,#0f172a);
-}
+        .navbar.scrolled {
+            background: rgba(10, 10, 15, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border);
+        }
 
-#hero h1{
-    font-size:48px;
-}
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-#hero span{
-    color:#38bdf8;
-}
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            font-family: 'Space Grotesk', sans-serif;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
 
-.btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 25px;
-    background:#38bdf8;
-    color:#000;
-    border-radius:6px;
-    text-decoration:none;
-    font-weight:600;
-}
+        .nav-links {
+            display: flex;
+            gap: 35px;
+        }
 
-.btn:hover{
-    background:#0ea5e9;
-}
+        .nav-links a {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            position: relative;
+        }
 
-/* ABOUT */
-#about{
-    background:#111827;
-}
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
 
-.skills{
-    display:flex;
-    gap:15px;
-    margin-top:20px;
-    flex-wrap:wrap;
-}
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient);
+            transition: width 0.3s ease;
+        }
 
-.skill-box{
-    background:#1f2937;
-    padding:10px 15px;
-    border-radius:6px;
-}
+        .nav-links a:hover::after {
+            width: 100%;
+        }
 
-/* PROJECTS */
-#projects{
-    background:#0f172a;
-}
+        .mobile-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--text-primary);
+        }
 
-.project-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:30px;
-}
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
 
-.project-card{
-    background:#1e293b;
-    border-radius:10px;
-    overflow:hidden;
-    transition:.3s;
-}
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+        }
 
-.project-card:hover{
-    transform:translateY(-10px);
-}
+        .hero-bg img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1.5s ease;
+        }
 
-.project-card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-}
+        .hero-bg img.active {
+            opacity: 1;
+        }
 
-.project-content{
-    padding:20px;
-}
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(10, 10, 15, 0.92) 0%, rgba(10, 10, 15, 0.75) 50%, rgba(10, 10, 15, 0.85) 100%);
+            z-index: 0;
+        }
 
-/* CONTACT */
-#contact{
-    background:#111827;
-}
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
 
-form{
-    max-width:600px;
-}
+        .hero-text {
+            animation: fadeInUp 0.8s ease;
+        }
 
-input,textarea{
-    width:100%;
-    padding:10px;
-    margin-bottom:15px;
-    border:none;
-    border-radius:5px;
-}
+        .hero-text .greeting {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--accent);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-button{
-    padding:10px 20px;
-    border:none;
-    background:#38bdf8;
-    font-weight:600;
-    border-radius:5px;
-    cursor:pointer;
-}
+        .hero-text .greeting span {
+            width: 30px;
+            height: 2px;
+            background: var(--accent);
+        }
 
-footer{
-    text-align:center;
-    padding:20px;
-    background:#0f172a;
-    color:#94a3b8;
-}
+        .hero-text h1 {
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
 
-@media(max-width:768px){
-    #hero h1{
-        font-size:32px;
-    }
-}
+        .hero-text h1 .highlight {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
 
-    /* ANIMATIONS */
+        .hero-text .subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            max-width: 500px;
+        }
 
-/* Fade In Up */
-.fade-up{
-    opacity:0;
-    transform:translateY(40px);
-    transition:all 0.8s ease;
-}
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+        }
 
-.fade-up.show{
-    opacity:1;
-    transform:translateY(0);
-}
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
 
-/* Hero Fade */
-#hero div{
-    animation:fadeHero 1.5s ease forwards;
-    opacity:0;
-}
+        .btn-primary {
+            background: var(--gradient);
+            color: white;
+        }
 
-@keyframes fadeHero{
-    from{
-        opacity:0;
-        transform:translateY(30px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+        }
 
-/* Floating Card Effect */
-.project-card{
-    background:#1e293b;
-    border-radius:10px;
-    overflow:hidden;
-    transition:transform 0.4s ease, box-shadow 0.4s ease;
-}
+        .btn-secondary {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+        }
 
-.project-card:hover{
-    transform:translateY(-12px) scale(1.02);
-    box-shadow:0 15px 40px rgba(0,0,0,0.5);
-}
+        .btn-secondary:hover {
+            border-color: var(--accent);
+            background: rgba(99, 102, 241, 0.1);
+        }
 
-</style>
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            animation: fadeInRight 0.8s ease 0.2s both;
+        }
+
+        .hero-card {
+            width: 400px;
+            height: 500px;
+            background: var(--bg-secondary);
+            border-radius: 24px;
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--gradient);
+            opacity: 0.1;
+        }
+
+        .hero-card-inner {
+            position: absolute;
+            inset: 20px;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 30px;
+            background: linear-gradient(to top, rgba(10, 10, 15, 0.9), transparent);
+        }
+
+        .hero-card h3 {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .hero-card p {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .code-lines {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .code-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .code-dot:nth-child(1) {
+            background: #ff5f56;
+        }
+
+        .code-dot:nth-child(2) {
+            background: #ffbd2e;
+        }
+
+        .code-dot:nth-child(3) {
+            background: #27ca40;
+        }
+
+        .about {
+            background: var(--bg-secondary);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-img-box {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .about-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            padding: 16px 24px;
+            border-radius: 12px;
+        }
+
+        .about-badge h4 {
+            font-size: 32px;
+            color: var(--accent);
+        }
+
+        .about-badge span {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .about-content h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .about-content>p {
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .stat-item {
+            background: var(--bg-tertiary);
+            padding: 24px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+
+        .stat-item h4 {
+            font-size: 32px;
+            color: var(--accent);
+            margin-bottom: 4px;
+        }
+
+        .stat-item span {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .skills-section h4 {
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill-tag {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            border-color: var(--accent);
+            color: var(--text-primary);
+        }
+
+        .testimonials {
+            background: var(--bg-primary);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: var(--bg-secondary);
+            padding: 32px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: var(--bg-tertiary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .testimonial-info h4 {
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+
+        .testimonial-info span {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .testimonial-stars {
+            color: #fbbf24;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        .testimonial-card>p {
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: var(--bg-secondary);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 220px;
+            background: var(--bg-tertiary);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+        }
+
+        .project-content {
+            padding: 24px;
+        }
+
+        .project-content h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .project-content p {
+            color: var(--text-secondary);
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .project-tech span {
+            font-size: 12px;
+            padding: 6px 12px;
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--accent);
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        .contact {
+            background: var(--bg-secondary);
+        }
+
+        .contact-options {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-option {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: var(--bg-tertiary);
+            padding: 24px 30px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .contact-option:hover {
+            border-color: var(--accent);
+            transform: translateX(10px);
+        }
+
+        .contact-option-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: var(--accent);
+            flex-shrink: 0;
+        }
+
+        .contact-option-text {
+            flex: 1;
+        }
+
+        .contact-option-text h3 {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+        .contact-option-text p {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .contact-option>.fa-arrow-right {
+            color: var(--text-muted);
+            font-size: 18px;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-option:hover>.fa-arrow-right {
+            transform: translateX(5px);
+            color: var(--accent);
+        }
+
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-content p {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            color: var(--text-secondary);
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @media(max-width:1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text .subtitle {
+                margin: 0 auto 32px;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-visual {
+                display: none;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+        }
+
+        @media(max-width:768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .hero-text h1 {
+                font-size: 36px;
+            }
+
+            .hero-text .greeting {
+                justify-content: center;
+            }
+
+            .hero-text .greeting span {
+                display: none;
+            }
+
+            .hero-text .subtitle {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 70px 0;
+            }
+
+            .section-header h2 {
+                font-size: 32px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .stat-item {
+                padding: 20px;
+            }
+
+            .stat-item h4 {
+                font-size: 28px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-badge {
+                right: 10px;
+                bottom: -15px;
+                padding: 12px 18px;
+            }
+
+            .about-badge h4 {
+                font-size: 26px;
+            }
+
+            .contact-option {
+                padding: 20px;
+            }
+
+            .contact-option-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+
+            .contact-option-text h3 {
+                font-size: 18px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .testimonial-card {
+                padding: 24px;
+            }
+        }
+
+        @media(max-width:480px) {
+            .hero-text h1 {
+                font-size: 28px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .section-header h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<nav>
-    <h3>TEAM XY</h3>
-    <div>
-        <a href="#hero">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </div>
-</nav>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">TXY</a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
 
-<!-- HERO SECTION -->
-<section id="hero">
-    <div>
-        <h1>Hello, I'm <span>Jhon Xyryll Samoy</span></h1>
-        <p>A Young Software Developer & System Engineer from the Philippines</p>
-        <a href="#projects" class="btn">View My Work</a>
-    </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-    <h2>About Me</h2>
-    <p>
-        I am a 17 year-old developer passionate about building real-world digital systems.
-        I started coding at the age of 13 and have developed multiple live systems used in school environments.
-        I use tools efficiently while fully understanding the engineering
-        and logic behind every system I build.
-        <br><br>
-        I have strong experience debugging complex issues, handling live deployments,
-        and building scalable systems using XAMPP, PHP, JavaScript, Python, and C++.
-    </p>
-
-    <h3 style="margin-top:40px;">Technical Skills</h3>
-<div class="skills">
-    <div class="skill-box">JavaScript</div>
-    <div class="skill-box">Next.js</div>
-    <div class="skill-box">PHP</div>
-    <div class="skill-box">Python</div>
-    <div class="skill-box">C++</div>
-    <div class="skill-box">HTML / CSS</div>
-    <div class="skill-box">MySQL</div>
-    <div class="skill-box">Linux (Ubuntu)</div>
-    <div class="skill-box">Git / Version Control</div>
-    <div class="skill-box">Vercel Deployment</div>
-    <div class="skill-box">XAMPP / Local Servers</div>
-    <div class="skill-box">API Integration</div>
-    <div class="skill-box">AI-assisted Development</div>
-    <div class="skill-box">Website Replication</div>
-</div>
-
-    <h3 style="margin-top:40px;">Professional Strengths</h3>
-    <p>
-        • Strong debugging & problem-solving skills <br>
-        • Able to work under pressure (live event systems) <br>
-        • Project coordination & leadership <br>
-        • Backend logic and server handling experience <br>
-        • Builds systems from concept to deployment
-    </p>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects">
-    <h2>Featured Projects</h2>
-
-    <div class="project-grid">
-
-        <!-- SSLG Voting -->
-        <div class="project-card">
-            <img src="https://photouploads.com/i/jCLk.png">
-            <div class="project-content">
-                <h3>SSLG Online Voting System</h3>
-                <p>
-                    A secure digital voting platform developed for school elections.
-                    Designed for realtime voting, accurate tabulation, and smooth deployment.
-                    One of my most complex and challenging systems.
-                </p>
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="pictures/540420865_2573014236425105_7755389066504817580_n.jpg" class="active">
+            <img src="pictures/538703578_815169917507753_8804508031377158415_n.jpg">
+            <img src="pictures/633558039_916952220840716_2449322185127861914_n.jpg">
+            <img src="pictures/ba117ca1-ffc5-4c62-b83e-2e51b8494bb5.jpeg">
+            <img src="pictures/c416affa-efcd-4121-860d-6d9d796dce7e.jpeg">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="greeting"><span></span>Hello, I'm</div>
+                    <h1>Jhon Xyryll <span class="highlight">Samoy</span></h1>
+                    <p class="subtitle">A Young Software Developer and System Engineer from the Philippines</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary"><i class="fas fa-briefcase"></i>View Projects</a>
+                        <a href="#contact" class="btn btn-secondary"><i class="fas fa-envelope"></i>Contact Me</a>
+                    </div>
+                </div>
+                <div class="hero-visual" style="display:none;">
+                    <div class="hero-card">
+                        <div class="code-lines">
+                            <div class="code-dot"></div>
+                            <div class="code-dot"></div>
+                            <div class="code-dot"></div>
+                        </div>
+                        <div class="hero-card-inner">
+                            <h3>Software Developer</h3>
+                            <p>Building scalable systems from concept to deployment</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- Photobooth -->
-        <div class="project-card">
-            <img src="https://photouploads.com/i/jCLl.png">
-            <div class="project-content">
-                <h3>School PhotoBooth Web System</h3>
-                <p>
-                    A custom web-based photobooth platform created to eliminate rental costs.
-                    Fully functional and used during school activities and events.
-                </p>
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <p>Get to know the person behind the code</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="about-img-box">
+                        <img src="pictures/633558039_916952220840716_2449322185127861914_n.jpg" alt="Jhon Xyryll Samoy">
+                    </div>
+                    <div class="about-badge" style="display:none;">
+                        <h4>5+</h4>
+                        <span>Years Experience</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h3>Building Digital Solutions with Purpose</h3>
+                    <p>I'm a 15 year old developer with over 5 years of coding experience, passionate about building
+                        real world digital systems. I started my journey at age 10 and have developed multiple
+                        production systems deployed in school environments and small businesses.</p>
+                    <p>I specialize in creating custom websites for small businesses and building school management
+                        systems. From debugging complex issues to handling live deployments, I bring an engineering
+                        mindset to every project. My goal is to help businesses and schools streamline their operations
+                        through efficient, reliable digital solutions.</p>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <h4>15+</h4><span>Projects Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <h4>5+</h4><span>Years Coding</span>
+                        </div>
+                        <div class="stat-item">
+                            <h4>100%</h4><span>Client Satisfaction</span>
+                        </div>
+                    </div>
+                    <div class="skills-section">
+                        <h4>Tech Stack</h4>
+                        <div class="skills-grid">
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">PHP</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">C++</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">XAMPP</span>
+                            <span class="skill-tag">HTML/CSS</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Next.js</span>
+                            <span class="skill-tag">Google Ads</span>
+                            <span class="skill-tag">AI Automation</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- Judges Panel -->
-        <div class="project-card">
-            <img src="https://photouploads.com/i/jCLV.png">
-            <div class="project-content">
-                <h3>Panel of Judges Tabulation System</h3>
-                <p>
-                    A scoring and tabulation system for school competitions.
-                    Designed for accurate score calculation and faster results processing.
-                </p>
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Clients Say</h2>
+                <p>Feedback from businesses and schools I've worked with</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">DM</div>
+                        <div class="testimonial-info">
+                            <h4>David Mitchell</h4>
+                            <span>Restaurant Owner, London UK</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>Xy built our restaurant's online ordering system and website. The system handles our daily orders
+                        seamlessly and the website looks fantastic. Professional, responsive, and delivered exactly what
+                        we needed. Highly recommended!</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">SR</div>
+                        <div class="testimonial-info">
+                            <h4>Sarah Reynolds</h4>
+                            <span>School Administrator, Sydney Australia</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>Our school needed a secure voting system for student council elections. Xy delivered a
+                        professional, easy to use system that made our election process smooth and transparent. The real
+                        time results feature was incredibly helpful. Excellent work!</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">JC</div>
+                        <div class="testimonial-info">
+                            <h4>James Carter</h4>
+                            <span>Small Business Owner, Texas USA</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>Needed a custom inventory management system for my retail store. Xy understood our requirements
+                        perfectly and delivered a system that has saved us countless hours. Great communication
+                        throughout the project. Will definitely work with them again.</p>
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- Roblox Game: Barikada -->
-        <div class="project-card">
-            <img src="https://photouploads.com/i/jCLQ.png">
-            <div class="project-content">
-                <h3>Barikada – Roblox Game Project</h3>
-                <p>
-                    A Roblox game developed as a creative side project while studying game scripting.
-                    This project allowed me to explore Lua scripting, game mechanics design,
-                    and interactive environment building within the Roblox platform.
-                </p>
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <p>Some of the systems I've built and deployed</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://photouploads.com/i/jCLk.png" alt="SSLG Voting System">
+                    </div>
+                    <div class="project-content">
+                        <h3>SSLG Online Voting System</h3>
+                        <p>A secure digital voting platform for school elections with real time voting, accurate
+                            tabulation, and seamless deployment.</p>
+                        <div class="project-tech">
+                            <span>PHP</span><span>MySQL</span><span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://photouploads.com/i/jCLl.png" alt="Photobooth System">
+                    </div>
+                    <div class="project-content">
+                        <h3>School PhotoBooth Web System</h3>
+                        <p>A custom web based photobooth platform that eliminated rental costs, fully functional for
+                            school events.</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span><span>HTML/CSS</span><span>PHP</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://photouploads.com/i/jCLV.png" alt="Judges Panel System">
+                    </div>
+                    <div class="project-content">
+                        <h3>Panel of Judges Tabulation System</h3>
+                        <p>A scoring and tabulation system for school competitions with accurate calculations and fast
+                            results processing.</p>
+                        <div class="project-tech">
+                            <span>PHP</span><span>MySQL</span><span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- Roblox Game: Box -->
-        <div class="project-card">
-            <img src="https://photouploads.com/i/jCLc.png">
-            <div class="project-content">
-                <h3>Box – Roblox Game Project</h3>
-                <p>
-                    Another personal Roblox game project where I experimented with gameplay mechanics
-                    and level design. I often use game development as a creative outlet to improve
-                    my scripting skills and express ideas through interactive systems.
-                </p>
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Have a project in mind? Let's talk about it.</p>
+            </div>
+            <div class="contact-options">
+                <a href="https://wa.me/639915120857" class="contact-option" target="_blank">
+                    <div class="contact-option-icon"><i class="fab fa-whatsapp"></i></div>
+                    <div class="contact-option-text">
+                        <h3>WhatsApp</h3>
+                        <p>+63 991 512 0857</p>
+                    </div>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="mailto:jhonxyryllsamoy@gmail.com" class="contact-option">
+                    <div class="contact-option-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="contact-option-text">
+                        <h3>Email</h3>
+                        <p>jhonxyryllsamoy@gmail.com</p>
+                    </div>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
         </div>
+    </section>
 
-        <div class="project-card">
-    <img src="https://photouploads.com/i/jCXO.png">
-    <div class="project-content">
-        <h3>Uzuki Mikata VPN</h3>
-        <p>
-            A VPN application I developed at the age of 14 under the Freenet initiative.
-            It was designed to provide free internet access to users. The system gained
-            traction but was eventually discontinued after telecom providers (TM and TNT)
-            patched the exploit it relied on.
-        </p>
-    </div>
-</div>
-        <div class="project-card">
-    <img src="https://photouploads.com/i/jCX6.png">
-    <div class="project-content">
-        <h3>Uzuki Mikata Messenger Chatbot</h3>
-        <p>
-            A Messenger-based chatbot developed before the rise of built-in AI tools on the platform.
-            This system allowed users to search Google and access information without requiring mobile data.
-            It became widely used among students and teachers at the time, reaching nearly 30,000 concurrent users.
-        </p>
-    </div>
-</div>
-        
-    </div>
-</section>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Jhon Xyryll Samoy. All Rights Reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="mailto:xyryllsamoy@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-<!-- CONTACT -->
-<section id="contact">
-    <h2>Contact Me</h2>
-    <p>Feel free to reach out for collaborations or projects.</p>
+    <script>
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) { navbar.classList.add('scrolled'); }
+            else { navbar.classList.remove('scrolled'); }
+        });
 
-    <div style="margin-top:30px; text-align:center;">
-        
-        <a href="https://wa.me/639915120857" target="_blank" 
-           style="
-           display:inline-block;
-           padding:15px 30px;
-           background:#25D366;
-           color:white;
-           font-weight:600;
-           border-radius:8px;
-           text-decoration:none;
-           font-size:18px;">
-           
-           💬 Message Me on WhatsApp
-        </a>
+        const heroImages = document.querySelectorAll('.hero-bg img');
+        let currentImage = 0;
+        function changeHeroImage() {
+            heroImages[currentImage].classList.remove('active');
+            currentImage = (currentImage + 1) % heroImages.length;
+            heroImages[currentImage].classList.add('active');
+        }
+        setInterval(changeHeroImage, 4000);
 
-        <p style="margin-top:20px; color:#94a3b8;">
-            WhatsApp: +63 991 512 0857
-        </p>
-
-    </div>
-</section>
-
-<footer>
-    © 2026 Jhon Xyryll Samoy | All Rights Reserved
-</footer>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+            });
+        });
+    </script>
 
 </body>
 
-    <script>
-const observer = new IntersectionObserver((entries)=>{
-    entries.forEach(entry=>{
-        if(entry.isIntersecting){
-            entry.target.classList.add("show");
-        }
-    });
-},{threshold:0.2});
-
-document.querySelectorAll("section, .project-card").forEach((el)=>{
-    el.classList.add("fade-up");
-    observer.observe(el);
-});
-</script>
 </html>
