@@ -23,7 +23,7 @@ const projects = [
 
 const testimonials = [
   { name: 'Mark Thompson', location: 'Restaurant Owner, Brisbane Australia', initials: 'MT', text: "Found Xy through social media and decided to work with them despite the distance. The video call meetings made coordination easy despite the time zone difference. Delivered a custom website for our cafe that increased our online orders significantly. Great communication and patience throughout the project. Will recommend!" },
-  { name: 'Maria Santos', location: 'School Principal, Manila Philippines', initials: 'MS', text: "Our school needed a voting system for our student council elections. Xy was professional and understanding of our requirements even though we had limited technical knowledge. The system worked flawlessly on election day and the results were accurate. Very satisfied with the outcome. Will definitely hire again for future projects." },
+  { name: 'Maria Santos', location: 'IT Manager, Manila Philippines', initials: 'MS', text: "Our school needed a voting system for our student council elections. Xy was professional and understanding of our requirements even though we had limited technical knowledge. The system worked flawlessly on election day and the results were accurate. Very satisfied with the outcome. Will definitely hire again for future projects." },
   { name: 'John Liu', location: 'Retail Store Owner, Cebu City Philippines', initials: 'JL', text: "Needed an inventory management system for our store. Xy took the time to understand our business process and delivered exactly what we needed. The system has helped us track our stock much better. Patient developer who listens to feedback. Highly recommend for local businesses looking for custom solutions." }
 ]
 
