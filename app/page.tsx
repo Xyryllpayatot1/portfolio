@@ -16,9 +16,10 @@ const heroImages = [
 const skills = ['JavaScript', 'PHP', 'Python', 'C++', 'MySQL', 'HTML/CSS', 'Node.js', 'Next.js', 'Google Ads', 'AI Automation']
 
 const projects = [
-  { title: 'SSLG Online Voting System', description: 'A secure digital voting platform for school elections with real time voting, accurate tabulation, and seamless deployment.', image: 'https://photouploads.com/i/jCLk.png', tech: ['PHP', 'MySQL', 'JavaScript'] },
-  { title: 'School PhotoBooth Web System', description: 'A custom web based photobooth platform that eliminated rental costs, fully functional for school events.', image: 'https://photouploads.com/i/jCLl.png', tech: ['JavaScript', 'HTML/CSS', 'PHP'] },
-  { title: 'Panel of Judges Tabulation System', description: 'A scoring and tabulation system for school competitions with accurate calculations and fast results processing.', image: 'https://photouploads.com/i/jCLV.png', tech: ['PHP', 'MySQL', 'JavaScript'] }
+  { title: 'SSLG Online Voting System', description: 'A secure digital voting platform for school elections with real time voting, accurate tabulation, and seamless deployment.', image: 'https://photouploads.com/i/jCLk.png', tech: ['PHP', 'MySQL', 'JavaScript'], link: null },
+  { title: 'School PhotoBooth Web System', description: 'A custom web based photobooth platform that eliminated rental costs, fully functional for school events.', image: 'https://photouploads.com/i/jCLl.png', tech: ['JavaScript', 'HTML/CSS', 'PHP'], link: null },
+  { title: 'Panel of Judges Tabulation System', description: 'A scoring and tabulation system for school competitions with accurate calculations and fast results processing.', image: 'https://photouploads.com/i/jCLV.png', tech: ['PHP', 'MySQL', 'JavaScript'], link: null },
+  { title: 'Brewed Haven Café Website', description: 'A professional business website for a specialty café — featuring a full menu, brand story, customer reviews, and contact info.', image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80', tech: ['Next.js', 'TypeScript', 'CSS Modules'], link: '/cafe' },
 ]
 
 const testimonials = [
@@ -140,16 +141,24 @@ export default function Home() {
             <p>Some of the systems I&apos;ve built and deployed</p>
           </div>
           <div className="projects-grid">
-            {projects.map((p, i) => (
-              <div key={i} className="project-card">
-                <div className="project-image"><img src={p.image} alt={p.title} /></div>
-                <div className="project-content">
-                  <h3>{p.title}</h3>
-                  <p>{p.description}</p>
-                  <div className="project-tech">{p.tech.map((t) => (<span key={t}>{t}</span>))}</div>
+            {projects.map((p, i) => {
+              const card = (
+                <div key={i} className="project-card" style={p.link ? { cursor: 'pointer' } : {}}>
+                  <div className="project-image"><img src={p.image} alt={p.title} /></div>
+                  <div className="project-content">
+                    <h3>{p.title}</h3>
+                    <p>{p.description}</p>
+                    <div className="project-tech">
+                      {p.tech.map((t) => (<span key={t}>{t}</span>))}
+                      {p.link && <span style={{ background: 'rgba(99,102,241,0.2)', color: '#818cf8' }}>Live Demo ↗</span>}
+                    </div>
+                  </div>
                 </div>
-              </div>
-            ))}
+              )
+              return p.link
+                ? <a key={i} href={p.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>{card}</a>
+                : card
+            })}
           </div>
         </div>
       </section>
