@@ -94,7 +94,7 @@ export default function Home() {
             </div>
             <div className="about-content">
               <h3>Building Digital Solutions with Purpose</h3>
-              <p>I'm a 17 year old developer with over 7 years of coding experience, passionate about building real world digital systems. I started my journey at age 13 and have developed multiple production systems deployed in school environments and small businesses.</p>
+              <p>I'm a 17 year old developer with over 4 years of coding experience, passionate about building real world digital systems. I started my journey at age 13 and have developed multiple production systems deployed in school environments and small businesses.</p>
               <p>I specialize in creating custom websites for small businesses and building school management systems. From debugging complex issues to handling live deployments, I bring an engineering mindset to every project.</p>
               <div className="stats-grid">
                 <div className="stat-item"><h4>15+</h4><span>Projects Completed</span></div>
