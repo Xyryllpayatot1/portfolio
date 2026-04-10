@@ -1,12 +1,22 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Cormorant_Garamond, Manrope } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const manrope = Manrope({
+  subsets: ['latin'],
+  variable: '--font-body',
+})
+
+const cormorant = Cormorant_Garamond({
+  subsets: ['latin'],
+  variable: '--font-display',
+  weight: ['500', '600', '700'],
+})
 
 export const metadata: Metadata = {
   title: 'Jhon Xyryll Samoy | Software Developer',
-  description: 'Portfolio of Jhon Xyryll Samoy Software Developer and System Engineer from the Philippines',
+  description:
+    'Portfolio of Jhon Xyryll Samoy, a young software developer building websites and custom systems from the Philippines.',
 }
 
 export default function RootLayout({
@@ -16,7 +26,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${manrope.variable} ${cormorant.variable}`}>{children}</body>
     </html>
   )
 }
