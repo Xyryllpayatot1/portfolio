@@ -41,6 +41,14 @@ const tickerWords = [
   'Precision',
   'Clean',
   'Modern',
+  'Focus',
+  'Bold',
+  'Sharp',
+  'Polish',
+  'Execute',
+  'Deliver',
+  'Build',
+  'Shipped',
 ]
 
 const skills = [
@@ -146,7 +154,7 @@ export default function Home() {
   useEffect(() => {
     const interval = window.setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % heroImages.length)
-    }, 1000)
+    }, 4000)
 
     return () => window.clearInterval(interval)
   }, [])
@@ -266,13 +274,8 @@ export default function Home() {
 
       <section className="signal-strip" aria-label="Design highlights">
         <div className="ticker-set">
-          {tickerWords.map((word, i) => (
-            <span key={`a-${i}`} className="ticker-item">{word}</span>
-          ))}
-        </div>
-        <div className="ticker-set" aria-hidden="true">
-          {tickerWords.map((word, i) => (
-            <span key={`b-${i}`} className="ticker-item">{word}</span>
+          {[...tickerWords, ...tickerWords].map((word, i) => (
+            <span key={i} className="ticker-item">{word}</span>
           ))}
         </div>
       </section>
